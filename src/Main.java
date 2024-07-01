@@ -2,15 +2,16 @@
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        int Score = 100; // на счету у клиента
-        int Replenish = 1500; // сумма пополнения
+        int score = 100; // исходный баланс
+        int replenish = 1100; // сумма пополнения
         int bonus;
-        if (Replenish > 1000) {
-            bonus = (Score + Replenish) / 100;
+        if (replenish > 1000) {
+            bonus = replenish / 100;
         } else {
             bonus = 0;
         }
-        int finalScore = Score + Replenish + bonus;
+        int finalScore = score + replenish + bonus;
+        System.out.println("Начислено бонусов:" + bonus);
         System.out.println("Ваш баланс:" + finalScore);
 
     }
